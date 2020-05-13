@@ -30,4 +30,4 @@ eureka:
 
 
 country:
-  client: country-client
+  client: country-client-git
