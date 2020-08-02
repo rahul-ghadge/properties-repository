@@ -14,7 +14,7 @@ spring:
       enabled: true
 
 server:
-  port: ${PORT:0}   # 8090
+  port: 8090
 
 
 management:
@@ -27,7 +27,7 @@ eureka:
   instance:
     leaseRenewalIntervalInSeconds: 1
     leaseExpirationDurationInSeconds: 5
-    instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
+    # instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
   client:
     #    serviceUrl:
     #      defaultZone: http://127.0.0.1:8761/eureka/
