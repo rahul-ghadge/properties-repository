@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: zuul-api-country-details
+
+  devtools:
+    restart:
+      enabled: true
+
+server:
+  port: 8090
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          #"*"
+          - beans
+          - health
+          - routes
+          - httptrace
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 5
+    # instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    #    serviceUrl:
+    #      defaultZone: http://127.0.0.1:8761/eureka/
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5
