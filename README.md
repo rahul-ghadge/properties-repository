@@ -1,6 +1,6 @@
 # properties-repository
 
-This repository is for providing property files for Microservices. 
+This repository is for providing property files for Microservices.  
 Microservice are reading property files via spring boot cloud config server applications.
 
 #
